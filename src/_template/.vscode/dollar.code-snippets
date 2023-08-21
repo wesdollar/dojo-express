@@ -1,0 +1,85 @@
+{
+  "Print to console": {
+    "scope": "javascript,typescript",
+    "prefix": "dollar:log",
+    "body": ["console.log($1);", "$2"],
+    "description": "Log output to console"
+  },
+
+  "React Component Short Return": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "dollar:rccs",
+    "body": [
+      "export const $1 = () => (",
+      "  <Box>",
+      "    $2",
+      "  </Box>",
+      ");"
+    ],
+    "description": "Creates a new React component using fat-arrow syntax."
+  },
+
+  "React Component Long Return": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "dollar:rccl",
+    "body": [
+      "export const $1 = () => {",
+      "  return (",
+      "  <Box>",
+      "      $2",
+      "  </Box>",
+      "  );",
+      "}"
+    ],
+    "description": "Creates a new React component using fat-arrow syntax."
+  },
+
+  "Stringified console log": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "dollar:logs",
+    "body": ["console.log(JSON.stringify($1, null, 2));"],
+    "description": "Creates a new React component using fat-arrow syntax."
+  },
+
+  "Jest describe block": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "dollar:jdesc",
+    "body": ["describe(\"$1\", () => {$2});"],
+    "description": "Creates a jest describe statement."
+  },
+
+  "Jest it block": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "dollar:jit",
+    "body": ["it(\"$1\", () => {$2});"],
+    "description": "Create a jest it statement."
+  },
+
+  "Jest async it block": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "dollar:jita",
+    "body": ["it(\"$1\", async () => {$2});"],
+    "description": "Create a jest async it statement."
+  },
+
+  "Jest Mock method/function": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "dollar:jmock",
+    "body": ["jest.mock(\"$1\", () => ({", "$2: jest.fn($3),", "}));"],
+    "description": "Create a jest async it statement."
+  },
+
+  "@tsignore mockery for unit tests": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "dollar:tsmockery",
+    "body": ["// @ts-ignore mockery"],
+    "description": "Ignore next line of TS because we're mocking the data for unit testing only."
+  },
+
+  "console HIT": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "dollar:hit",
+    "body": ["console.log(\"HIT\");"],
+    "description": "Throws a console.log with hit, for debugging"
+  }
+}
