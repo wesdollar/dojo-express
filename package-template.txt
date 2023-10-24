@@ -1,15 +1,15 @@
 {
   "name": "@dollardojo/express-generator",
-  "version": "1.0.0",
+  "version": ~~VERSION~~,
   "description": "Lightweight Express framework for building microservices.",
   "main": "index.js",
+  "bin": "index.js",
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
     "eslint": "eslint src --ext .ts",
     "eslint:fix": "eslint src --ext .ts --fix",
     "prettier": "prettier --write src/**/*.{ts,js}",
-    "publish": "npx ts-node publish.ts",
     "test": "No tests provided."
   },
   "keywords": [

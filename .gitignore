@@ -14,4 +14,3 @@ node_modules
 coverage
 dist
 .env
-!./src/_template/.env
